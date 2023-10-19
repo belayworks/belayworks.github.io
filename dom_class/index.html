@@ -13,7 +13,8 @@
 </style>
 </head>
 <body  style="background-color: aqua;">
-  <div  text-align: center; font-size: 50px;">DOM CLASS</div>
+  <section class="tedclass">
+  <div  text-align: center; font-size: 50px;>DOM CLASS</div>
 
 <!-- <div class="container">
   <h1 id="main-heading">Favourite Movie Franchise</h1>
@@ -65,22 +66,39 @@
 
 <a href="https://www.Google.com"  id="mya"></a>
 
-<p id= myParagraph >This is a existing paragraph.</p>
+<p id= myNewParagraph >This is a existing paragraph.</p>
+
+
+<textarea id="myTextArea"  name="" id="" cols="30" rows="10" >comment</textarea>
+
+</div>
+
+<div>
+<textarea ></textarea>
+  <button onclick="appendText(1)">1</button>
+  <button onclick="appendText(2)">2</button>
+  <button oncanplay="appendText(3)">3</button>
+  <button oncanplay="appendText('+')">+</button>
+  <button oncanplay="appendText('-')">-</button>
+  <button onclick="execute()">GO</button>
+</div>
 
 
 <!-- /////////////////////// -->
-<!-- <div id="container">
-<div id="dynamicCon">
-<p>This is a dynamic paragraph.</p>
-<img  id="img" src="placeholder.jpg" alt="">
-<a id="link" href="https://www.example.com">Dy Link</a>
-<input type="text" id="input" placeholder="textInput">
+<button onclick="createAdd()">createADD</button>
+<p class="addText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, a.</p>
+
+
+
+<!-- /////clear content -->
+<input  id="newInput" type="text" placeholder="enter text">
+<button onclick="clearCon()" id="clearIt">submit</button>
 
 </div>
-</div> -->
 
-</div>
+
+</section>
 <script src="./app.js" ></script>
 <script src="./script.js" ></script>
 </body>
-</html>
+</html
