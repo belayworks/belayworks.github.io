@@ -405,14 +405,14 @@ window.onload = function (){
 let textDIV = document.querySelector(".textDIV")
 let textAreaDiv = document.querySelector("#moveItTop");
 // let textBut = document.querySelector("#moveTopBut");
-
+// let newLine = document.createElement("br")
 console.log(textDIV)
 function moveIt(){
+
   let prependUp=textAreaDiv.value;
-  let newLine = document.createElement("br")
-  textDIV.before(prependUp + " ");
   
-  // textDIV.textContent= textAreaDiv.value;
+  textDIV.prepend(prependUp + " ");
+  
   textAreaDiv.value = "";
 }
 document.body.append(textDIV)
@@ -437,11 +437,11 @@ document.body.append(textDIV)
 
 ////////add new element vto the list
 
-let addToOl = document.getElementById("newOl");
+// let addToOl = document.getElementById("newOl");
 let newListEle4 = document.createElement("li");
 newListEle4.innerHTML = "hello my city";
 console.log(newListEle4);
-addToOl.append(newListEle4);
+oList.append(newListEle4);
 // my.append(addToOl);
 // document.body(mySec)
 
