@@ -274,6 +274,7 @@ function hideContent() {
 
 // checked unchecked
 let thisDiv = document.createElement("div");
+thisDiv.style.backgroundColor = "lightyellow"
 let radInpA = document.createElement("input");
 radInpA.type = "radio";
 let rdLabA = document.createElement("label");
@@ -288,6 +289,7 @@ let chLab = document.createElement("label");
 chLab.innerHTML = "checkbox";
 
 let inpBUt = document.getElementById("unckBut");
+inpBUt.style.backgroundColor="lightyellow"
 
 
 thisDiv.append(radInpA, rdLabA, radInpB, rdLabB, chInp, chLab);
@@ -315,6 +317,7 @@ let delDIV2 = document.createElement("div");
 let imgOne = document.createElement("img");
 imgOne.src = "./flower2.jpeg";
 imgOne.style.width = "50px";
+imgOne.style.height = "50px";
 let pOne = document.createElement("p");
 pOne.innerHTML = "Maharishi";
 let pTwo = document.createElement("p");
@@ -323,6 +326,9 @@ pTwo.innerHTML = "Mahesh";
 let imgTwo = document.createElement("img");
 imgTwo.src = "./flower.jpg"
 imgTwo.style.width = "50px";
+imgTwo.style.height = "50px";
+
+
 let pThree = document.createElement("p");
 pThree.innerHTML = "John";
 let pFour = document.createElement("p");
@@ -333,6 +339,7 @@ let del1 = document.getElementById("deleteI");
 let del2 = document.getElementById("deleteII");
 let delDIVAll= document.createElement("div");
 delDIVAll.style.display = "flex";
+delDIVAll.style.backgroundColor = "lightblue"
 
 delDIV1.append(imgOne, pOne, pTwo, del1);
 delDIV2.append(imgTwo, pThree, pFour,del2)
