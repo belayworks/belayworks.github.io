@@ -234,7 +234,7 @@ let newLine6 = document.createElement("br");
 newLine6.setAttribute("texContent", "</br>");
 let newLine7 = document.createElement("br");
 newLine7.setAttribute("texContent", "</br>");
-
+////////////
 let myRadLabel = document.createElement("label");
 myRadLabel.innerHTML = "this is radio";
 let myButton = document.createElement("button");
@@ -247,27 +247,34 @@ let mytextAr = document.createElement("textarea");
 mytextAr.placeholder = "new textarea";
 
 let Table = document.createElement("table");
+Table.style.borderCollapse = "collapse";
 
 let hRow = document.createElement("tr");
 
 let th1 = document.createElement("th");
 th1.textContent = "Header1";
+th1.style.border = "1px solid black";
+th1.style.backgroundColor ="lightblue"
 let th2 = document.createElement("th");
 th2.textContent = "Header2";
-
+th2.style.backgroundColor = "lightblue";
+th2.style.border = "1px solid black";
 let fRow = document.createElement("tr");
 
 let r1col1 = document.createElement("td");
 r1col1.textContent = "r1columnOne";
+r1col1.style.border = "1px solid black"
 let r1col2 = document.createElement("td");
 r1col2.textContent = "r1columnTwo";
+r1col2.style.border = "1px solid black"
 
 let sRow = document.createElement("tr");
 let r2col1 = document.createElement("td");
 r2col1.textContent = "r2columnOne";
+r2col1.style.border = "1px solid black";
 let r2col2 = document.createElement("td");
 r2col2.textContent = "r2columnTwo";
-
+r2col2.style.border = "1px solid black";
 fRow.append(r1col1, r1col2);
 sRow.append(r2col1, r2col2);
 hRow.append(th1, th2);
@@ -339,17 +346,116 @@ mySec.append(
 
 // }
 
-function clearCon() {
-  let toClear = document.querySelector("#clearIt");
-
-  toClear.value = "";
-  // toClear.append(myInput);
-}
 
 let myInput = document.querySelector("#newInput");
 let clearText = document.querySelector("#clearIt");
-clearText.addEventListener("click", function () {
-  myInput.value = "";
-});
+function clearCon() { 
+
+myInput.value= ""
+}
+
+// let myInput = document.querySelector("#newInput");
+// let clearText = document.querySelector("#clearIt");
+// clearText.addEventListener("click", function () {
+//   myInput.value = "";
+// });
 
 mySec.append(clearText, myInput);
+
+
+
+/////from teachers gitHub
+window.onload = function (){
+  let myDIV5= document.createElement("div")
+  myDIV5.innerHTML = '<label>Name</label><input type="text" ';
+  document.body.append(myDIV5)
+} 
+
+
+///////////
+// let newList = document.createElement("ul");
+// let myCkBox1 = document.createElement("input");
+// myCkBox1.value = "fruits"
+// // myCkBox1.type = "checkbox";
+// myCkBox1.setAttribute("type", "checkbox")
+// let ckLabe1l = document.createElement("label");
+// ckLabel1.innerHTML = "checkbox1";
+
+// let myCkBox2 = document.createElement("input");
+// myCkBox2.type = "checkbox";
+// let ckLabe2 = document.createElement("label");
+// ckLabe2.innerHTML = "checkbox2";
+
+// let myCkBox3 = document.createElement("input");
+// myCkBox3.type = "checkbox";
+// let ckLabel3 = document.createElement("label");
+// ckLabel3.innerHTML = "checkbox3";
+
+// let myCkBox4 = document.createElement("input");
+// myCkBox4.type = "checkbox";
+// let ckLabel4 = document.createElement("label");
+// ckLabe4.innerHTML = "checkbox4";
+// newList.append(myCkBox1, ckLabe1l)
+// mySec.after(newList)
+// document.body.append(mySec)
+  // , myCkBox2, ckLabe2,myCkBox3, ckLabel3, myCkBox4, ckLabel4)
+
+  ////////////////
+
+let textDIV = document.querySelector(".textDIV")
+let textAreaDiv = document.querySelector("#moveItTop");
+// let textBut = document.querySelector("#moveTopBut");
+
+console.log(textDIV)
+function moveIt(){
+  let prependUp=textAreaDiv.value;
+  let newLine = document.createElement("br")
+  textDIV.before(prependUp + " ");
+  
+  // textDIV.textContent= textAreaDiv.value;
+  textAreaDiv.value = "";
+}
+document.body.append(textDIV)
+
+
+
+
+////////////////
+// sample exam
+
+
+// let newList = document.createElement("ul");
+// let newListEle1 = document.createElement("li");
+// newListEle1.innerHTML = "hello world";
+// let newListEle2 = document.createElement("li");
+// newListEle2.innerHTML = "hello country";
+
+
+// newList.append(newListEle1, newListEle2);
+// document.body.append(newList)
+
+
+////////add new element vto the list
+
+let addToOl = document.getElementById("newOl");
+let newListEle4 = document.createElement("li");
+newListEle4.innerHTML = "hello my city";
+console.log(newListEle4);
+addToOl.append(newListEle4);
+// my.append(addToOl);
+// document.body(mySec)
+
+
+///add row to existing table
+
+let exTable = document.querySelector("#tabId");
+let NewRow = document.createElement("tr")
+let colE= document.createElement("td");
+colE.innerHTML= "COLE"
+colE.style.border= "1px solid black"
+let colF = document.createElement("td");
+colF.innerHTML = "COLF";
+colF.style.border = "1px solid black";
+NewRow.append(colE, colF);
+exTable.append(NewRow)
+mySec.append(exTable)
